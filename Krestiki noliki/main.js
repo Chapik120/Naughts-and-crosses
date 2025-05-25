@@ -35,13 +35,9 @@ function checkWin() {
 
 let simbol = "✘";
 pole.addEventListener("click", (e) => {
-    if (e.target.className == "pole") {        
+    if (e.target.className == "pole" || e.target.innerHTML !== "") {
         return;
-    }
-
-    if (e.target.innerHTML !== "") {
-        return;
-    }
+    }}
 
     e.target.innerHTML = simbol;
     if (simbol == "✘") {
